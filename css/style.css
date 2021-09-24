@@ -159,6 +159,26 @@ a {
     margin: 0 auto;
 }
 
+.upper__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #EABD00;
+    padding: 16px 10px;
+}
+
+.upper__header p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+}
+
+.upper__header p a {
+    color: #000;
+    outline: none;
+}
+
 header {
     height: 50px;
     background-color: #000;
@@ -314,7 +334,9 @@ header {
 }
 
 .left__slider,
-.right__slider {
+.right__slider,
+.left__slider-page,
+.right__slider-page {
     max-height: 1603px;
     height: 100%;
     flex: 0 0 auto;
@@ -330,6 +352,10 @@ header {
     max-height: 1910px;
     height: 100%;
     margin-bottom: 20px;
+}
+
+.main__slider-page {
+    max-height: 1760px;
 }
 
 .sport24__btn {
@@ -380,11 +406,32 @@ a.main-slide__card img {
     transition: .4s all;
 }
 
+.photos__quantity {
+    display: flex;
+    max-width: 40px;
+    position: absolute;
+    z-index: 999;
+    top: 17px;
+    left: 16px;
+}
+
+.photos__quantity img {
+    width: 18px;
+    filter: invert(1);
+    margin-right: 6px;
+}
+
+.photos__quantity span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
 .card__image {
     overflow: hidden;
 }
 
-a.main-slide__card:hover img {
+a.main-slide__card:hover .card__image img {
     transform: scale(1.1);
 }
 
@@ -416,6 +463,7 @@ a.main-slide__card.big {
 a.main-slide__card.smaller {
     max-width: 514px;
     width: 100%;
+    position: relative;
 }
 
 a.main-slide__card.smaller .card__descr {
@@ -431,7 +479,7 @@ a.main-slide__card.smaller h3 {
     color: #000;
 }
 
-a.main-slide__card.smaller p {
+p.card__description {
     margin-top: 20px;
     font-size: 14px;
     color: #000;
@@ -442,6 +490,7 @@ a.main-slide__card.small {
     max-width: 348px;
     width: 100%;
     display: block;
+    position: relative;
 }
 
 a.main-slide__card.small .card__descr {
@@ -458,21 +507,22 @@ a.main-slide__card.small .card__descr h3 {
     color: #000;
 }
 
-a.main-slide__card.small .card__descr h4 {
+a.main-slide__card.small .card__descr h4,
+a.main-slide__card.smaller .card__descr h4 {
     margin-top: 15px;
     font-weight: 300;
     font-size: 14px;
     color: #000;
 }
 
-a.main-slide__card.small .card__descr p {
+p.card__lable {
     font-weight: 300;
     font-size: 12px;
     margin-top: 16px;
     color: #479B56;
 }
 
-a.main-slide__card.small .card__descr p span {
+p.card__lable span {
     color: #9D9A9B;
 }
 
@@ -495,6 +545,14 @@ a.main-slide__card.big .card__descr h3 {
 a.main-slide__card.big .card__descr p {
     color: #479B56;
     font-size: 12px;
+}
+
+p.blue-lable {
+    color: rgb(23, 212, 255) !important;
+}
+
+p.red-lable {
+    color: rgb(230, 80, 80) !important;
 }
 
 a.main-slide__card.big .card__descr p span {
@@ -758,8 +816,14 @@ a.main-slide__card.big .card__image img {
         margin-bottom: 50px;
     }
 
+    .main__slider-page {
+        margin-bottom: 100px;
+    }
+
     .left__slider,
-    .right__slider {
+    .right__slider,
+    .left__slider-page,
+    .right__slider-page {
         max-height: 1958px;
         height: 100%;
         margin-bottom: 20px;
@@ -795,7 +859,9 @@ a.main-slide__card.big .card__image img {
 @media (max-width: 768px) {
 
     .left__slider,
-    .right__slider {
+    .right__slider,
+    .left__slider-page,
+    .right__slider-page {
         max-height: 1600px;
     }
 }
@@ -814,7 +880,9 @@ a.main-slide__card.big .card__image img {
     }
 
     .left__slider,
-    .right__slider {
+    .right__slider,
+    .left__slider-page,
+    .right__slider-page {
         max-height: 1290px;
     }
 
