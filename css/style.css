@@ -154,7 +154,7 @@ a {
 }
 
 .wrapper {
-    max-width: 1768px;
+    max-width: 1778px;
     width: 100%;
     margin: 0 auto;
 }
@@ -170,6 +170,7 @@ header {
 .header__inner {
     display: flex;
     justify-content: space-between;
+    padding: 0 10px;
 }
 
 .burger {
@@ -287,7 +288,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 402px;
+    padding: 0 24px;
+    max-width: 402px;
+    width: 100%;
     height: 50px;
     background-color: #000000;
     margin-bottom: 20px;
@@ -299,7 +302,7 @@ header {
 
 .page__content {
     display: flex;
-
+    padding: 0 10px;
 }
 
 .left__sidebar {
@@ -438,6 +441,7 @@ a.main-slide__card.smaller p {
 a.main-slide__card.small {
     max-width: 348px;
     width: 100%;
+    display: block;
 }
 
 a.main-slide__card.small .card__descr {
@@ -542,8 +546,9 @@ a.main-slide__card.big .card__image {
 }
 
 a.main-slide__card.big .card__image img {
-    width: -webkit-fill-available;
-    height: 392px;
+    max-width: 697px;
+    width: 100%;
+    height: auto;
 }
 
 .main-slide__card.big .card__image::after {
@@ -640,5 +645,203 @@ a.main-slide__card.big .card__image img {
 
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1600px) {
+    .burger__menu {
+        right: 0;
+    }
+
+    .main {
+        flex: unset;
+    }
+
+    a.main-slide__card.big {
+        margin-right: 16px;
+    }
+
+    a.main-slide__card.smaller:first-child {
+        margin-right: 16px;
+    }
+
+    a.main-slide__card.small .card__descr h3 {
+        line-height: 22px;
+    }
+
+    a.main-slide__card.small,
+    a.main-slide__card.big {
+        max-width: 514px;
+    }
+
+    a.main-slide__card.big .card__descr {
+        position: static;
+        color: #000;
+        max-width: 333px;
+        margin-top: 22px;
+    }
+
+    a.main-slide__card.big .card__descr h3 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    a.main-slide__card.big .card__descr p span {
+        color: #9D9A9B;
+    }
+
+    a.main-slide__card.big .card__descr h3::after {
+        top: unset;
+        bottom: -21px;
+        left: 0;
+        color: #fff;
+        font-size: 13px;
+        width: 97px;
+        height: 20px;
+        transform: skewX(-16deg);
+    }
+
+    .sport24__btn {
+        width: 700px;
+        height: 140px;
+        background-color: unset;
+    }
+}
+
+@media (max-width: 1460px) {
+    .main {
+        flex: unset;
+    }
+
+    a.main-slide__card.big {
+        margin-right: 16px;
+    }
+
+    a.main-slide__card.smaller:first-child {
+        margin-right: 16px;
+    }
+
+    a.main-slide__card.small .card__descr h3 {
+        line-height: 22px;
+    }
+
+    .sport24__btn {
+        bottom: -8%;
+    }
+
+    .sport24__btn a {
+        max-width: 418px;
+        height: 90px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .sport24__btn {
+        bottom: -2%;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .page__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main {
+        grid-row: 1/3;
+        grid-column: 1/3;
+    }
+
+    .main__slider {
+        margin-bottom: 50px;
+    }
+
+    .left__slider,
+    .right__slider {
+        max-height: 1958px;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sport24__btn a {
+        max-width: 360px;
+        height: 75px;
+        font-size: 44px;
+    }
+
+    .sport24__btn {
+        bottom: -17%;
+        height: 86px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .sport24__btn {
+        position: static;
+        transform: unset;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .main__slider {
+        max-height: 1830px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .left__slider,
+    .right__slider {
+        max-height: 1600px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    a.main-slide__card.big .card__descr h3,
+    a.main-slide__card.smaller h3,
+    a.main-slide__card.small .card__descr h3 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .main__slider {
+        max-height: 1895px;
+    }
+
+    .left__slider,
+    .right__slider {
+        max-height: 1290px;
+    }
+
+    .burger__menu {
+        width: 100%;
+    }
+
+    .burger__menu a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .page__content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        grid-column: unset;
+    }
+
+    .left__sidebar {
+        margin-right: unset;
+    }
+
+    .right__sidebar {
+        margin-left: unset;
     }
 }
