@@ -1,3 +1,4 @@
+
 /* rubik-300 - latin_cyrillic */
 @font-face {
     font-family: 'Rubik';
@@ -141,7 +142,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -160,9 +162,15 @@ a {
 }
 
 .upper__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     background-color: #EABD00;
     padding: 16px 10px;
@@ -180,16 +188,25 @@ a {
 }
 
 header {
+    position: relative;
     height: 50px;
     background-color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 17px;
 }
 
 .header__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 10px;
 }
 
@@ -198,11 +215,9 @@ header {
     height: 20px;
     position: relative;
     -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -218,11 +233,9 @@ header {
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
 }
@@ -230,33 +243,31 @@ header {
 .burger span:nth-child(1) {
     top: 0px;
     -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
+    -ms-transform-origin: left center;
+        transform-origin: left center;
 }
 
 .burger span:nth-child(2) {
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
+    -ms-transform-origin: left center;
+        transform-origin: left center;
 }
 
 .burger span:nth-child(3) {
     bottom: 0;
     -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
+    -ms-transform-origin: left center;
+        transform-origin: left center;
 }
 
 .burger.open span:nth-child(1) {
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
     top: 0;
     left: 0px;
 }
@@ -268,15 +279,16 @@ header {
 
 .burger.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
     top: 18px;
     left: 0px;
 }
 
 
 .burger__menu {
+    -webkit-transition: height .5s ease;
+    -o-transition: height .5s ease;
     transition: height .5s ease;
     overflow: hidden;
 }
@@ -287,27 +299,45 @@ header {
 
 
 .burger__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: 50px;
     right: 68px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 50px;
     background-color: #2C2C2C;
     z-index: 99;
-    animation: fadeIn .4s forwards;
+    -webkit-animation: fadeIn .4s forwards;
+            animation: fadeIn .4s forwards;
 }
 
 .burger__menu.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .burger__menu a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 24px;
     max-width: 402px;
     width: 100%;
@@ -321,6 +351,8 @@ header {
 }
 
 .page__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 10px;
 }
@@ -339,74 +371,125 @@ header {
 .right__slider-page {
     max-height: 1603px;
     height: 100%;
-    flex: 0 0 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
 }
 
 .main {
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     max-width: 1058px;
     width: 100%;
 }
 
 .main__slider {
-    max-height: 1910px;
+    max-height: 1912px;
     height: 100%;
-    margin-bottom: 20px;
 }
 
 .main__slider-page {
-    max-height: 1760px;
+    max-height: 1778px;
 }
 
 .sport24__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 1058px;
-    background-color: #ffff;
     height: 200px;
     position: absolute;
-    bottom: -12%;
+    bottom: -32%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: 999;
 }
 
+.sport24__btn.static {
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+}
+
 .sport24__btn a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     outline: none;
     max-width: 500px;
     width: 100%;
     height: 100px;
-    filter: drop-shadow(0px 15px 21px rgba(0, 0, 0, 0.43));
+    -webkit-filter: drop-shadow(0px 15px 21px rgba(0, 0, 0, 0.43));
+            filter: drop-shadow(0px 15px 21px rgba(0, 0, 0, 0.43));
     border-radius: 55px;
     font-weight: 500;
     font-size: 55px;
     color: #000;
     text-transform: uppercase;
     background-color: #ffc400;
-    animation: backgroundColor 3s infinite 3s;
+    -webkit-animation: backgroundColor 3s infinite 3s;
+            animation: backgroundColor 3s infinite 3s;
 }
 
 .main-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 16px;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
     height: fit-content !important;
 }
 
 .main-slide:nth-child(even) {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
 }
 
 a.main-slide__card img {
     overflow: hidden;
+    -webkit-transition: .4s all;
+    -o-transition: .4s all;
     transition: .4s all;
 }
 
+a.main-slide__card.small img {
+    max-height: 188px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.main-slide__card.big img {
+    max-height: 392px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
 .photos__quantity {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 40px;
     position: absolute;
@@ -417,7 +500,8 @@ a.main-slide__card img {
 
 .photos__quantity img {
     width: 18px;
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
     margin-right: 6px;
 }
 
@@ -432,7 +516,9 @@ a.main-slide__card img {
 }
 
 a.main-slide__card:hover .card__image img {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 a.main-slide__card h3 {
@@ -440,17 +526,23 @@ a.main-slide__card h3 {
 }
 
 a.main-slide__card:hover h3 span {
-    box-shadow: inset 0 calc(-0.15em - 1px) 0 0 #EABD00;
+    -webkit-box-shadow: inset 0 calc(-0.15em - 1px) 0 0 #EABD00;
+            box-shadow: inset 0 calc(-0.15em - 1px) 0 0 #EABD00;
 }
 
 a.main-slide__card.big:hover h3 span {
-    box-shadow: inset 0 calc(-0.15em - 1px) 0 0 #EABD00;
+    -webkit-box-shadow: inset 0 calc(-0.15em - 1px) 0 0 #EABD00;
+            box-shadow: inset 0 calc(-0.15em - 1px) 0 0 #EABD00;
 }
 
 .main-slide__top,
 .main-slide__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 a.main-slide__card.big {
@@ -551,6 +643,10 @@ p.blue-lable {
     color: rgb(23, 212, 255) !important;
 }
 
+p.darkblue-lable {
+    color: #2284E6 !important;
+}
+
 p.red-lable {
     color: rgb(230, 80, 80) !important;
 }
@@ -559,35 +655,41 @@ a.main-slide__card.big .card__descr p span {
     color: #fff;
 }
 
-a.main-slide__card.big .card__descr h3::after {
-    content: 'Эксклюзив';
-    position: absolute;
-    top: 52px;
-    left: 223px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.exclusive-label {
+    display: inline-block;
+    margin-left: 4px;
+    text-align: center;
     width: 120px;
     height: 25px;
     background-color: #715BD4;
     font-size: 16px;
     font-weight: 900;
-    transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+            transform: skewX(-20deg);
     border-radius: 7px 0 7px 0;
 }
 
 a.main-slide__card.big .card__descr h3 p {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 146px;
     height: 35px;
     background-color: #715BD4;
     font-size: 16px;
     font-weight: 900;
     padding: 3px 7px;
-    transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+            transform: skewX(-20deg);
     border-radius: 7px 0 7px 0;
     margin-left: 4px;
 }
@@ -618,21 +720,33 @@ a.main-slide__card.big .card__image img {
     bottom: 0;
     left: 0;
     right: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0)), color-stop(60%, rgba(0, 0, 0, 0.2)), color-stop(65%, rgba(0, 0, 0, 0.3)), color-stop(75%, rgba(0, 0, 0, 0.6)), color-stop(90%, rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.9)));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.3) 65%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.8) 90%, rgba(0, 0, 0, 0.9));
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.3) 65%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.8) 90%, rgba(0, 0, 0, 0.9));
 }
 
 .cookies {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-color: #EABD00;
     padding: 17px 11px;
     position: sticky;
     bottom: 0;
     z-index: 99999;
     opacity: 0;
-    animation: fadeIn .8s forwards 2s;
+    -webkit-animation: fadeIn .8s forwards 2s;
+            animation: fadeIn .8s forwards 2s;
 }
 
 .cookies button {
@@ -650,9 +764,15 @@ a.main-slide__card.big .card__image img {
 .cookies p {
     max-width: 826px;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 19px;
@@ -661,9 +781,15 @@ a.main-slide__card.big .card__image img {
 
 .footer {
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: #000;
 }
 
@@ -672,6 +798,28 @@ a.main-slide__card.big .card__image img {
     font-size: 14px;
     line-height: 18px;
     color: #fff;
+}
+
+@-webkit-keyframes backgroundColor {
+    0% {
+        background-color: #fbff00;
+    }
+
+    25% {
+        background-color: #ffbb00;
+    }
+
+    50% {
+        background-color: #ffe600;
+    }
+
+    75% {
+        background-color: #e5ff00;
+    }
+
+    100% {
+        background-color: #a6ff00dc;
+    }
 }
 
 @keyframes backgroundColor {
@@ -696,6 +844,16 @@ a.main-slide__card.big .card__image img {
     }
 }
 
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -712,7 +870,9 @@ a.main-slide__card.big .card__image img {
     }
 
     .main {
-        flex: unset;
+        -webkit-box-flex: unset;
+            -ms-flex: unset;
+                flex: unset;
     }
 
     a.main-slide__card.big {
@@ -756,7 +916,9 @@ a.main-slide__card.big .card__image img {
         font-size: 13px;
         width: 97px;
         height: 20px;
-        transform: skewX(-16deg);
+        -webkit-transform: skewX(-16deg);
+            -ms-transform: skewX(-16deg);
+                transform: skewX(-16deg);
     }
 
     .sport24__btn {
@@ -764,11 +926,17 @@ a.main-slide__card.big .card__image img {
         height: 140px;
         background-color: unset;
     }
+
+    .sport24__btn.static {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1460px) {
     .main {
-        flex: unset;
+        -webkit-box-flex: unset;
+            -ms-flex: unset;
+                flex: unset;
     }
 
     a.main-slide__card.big {
@@ -784,7 +952,7 @@ a.main-slide__card.big .card__image img {
     }
 
     .sport24__btn {
-        bottom: -8%;
+        bottom: -25%;
     }
 
     .sport24__btn a {
@@ -796,19 +964,25 @@ a.main-slide__card.big .card__image img {
 
 @media (max-width: 1300px) {
     .sport24__btn {
-        bottom: -2%;
+        bottom: -22%;
     }
 
 }
 
 @media (max-width: 1100px) {
     .page__content {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
 
     .main {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
         grid-row: 1/3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-column: 1/3;
     }
 
@@ -836,18 +1010,19 @@ a.main-slide__card.big .card__image img {
     }
 
     .sport24__btn {
-        bottom: -17%;
+        bottom: -32%;
         height: 86px;
+    }
+
+    .sport24__btn.static {
+        margin-bottom: 20px;
     }
 
 }
 
 @media (max-width: 1000px) {
-    .sport24__btn {
-        position: static;
-        transform: unset;
-        width: 100%;
-        margin-bottom: 40px;
+    .sport24__btn.absolute {
+        display: none;
     }
 
     .main__slider {
@@ -897,7 +1072,9 @@ a.main-slide__card.big .card__image img {
 
 @media (max-width: 400px) {
     .page__content {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
